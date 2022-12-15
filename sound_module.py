@@ -14,7 +14,7 @@ class Sound_module():
 		self.slider.set(100)
 		self.slider.pack(side = tk.LEFT)
 
-		self.play_button = tk.Button(self.frame, text = 'play', command = self.button_play)
+		self.play_button = tk.Button(self.frame, text = 'play', command = self.audio.play)
 		self.play_button.pack(side = tk.RIGHT)
 		
 		self.pause_button = tk.Button(self.frame, text = 'pause/resume', command = self.button_pause_resume)
@@ -32,9 +32,6 @@ class Sound_module():
 			self.audio.pause()
 		else:
 			self.audio.resume()
-
-	def button_play(self):
-		self.audio.play()
 
 	def volume_update(self, value=None):
 		val = (self.slider.get())/100
