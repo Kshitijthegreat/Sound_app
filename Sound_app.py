@@ -1,5 +1,5 @@
 import tkinter as tk
-import just_playback
+import sound_module
 
 window = tk.Tk()
 window.geometry("500x500")
