@@ -18,6 +18,7 @@ def main():
 		module10 = sound_module.Sound_module('sound_files/buffer_3.mp3', window)
 	def type_two():
 		pass
+	type_one()
 	window.mainloop()
 if __name__=='__main__':
 	main()
