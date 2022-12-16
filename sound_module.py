@@ -47,8 +47,7 @@ class Sound_module():
 			self.audio.play()
 
 	def volume_update(self, value=None):
-		val = (self.slider.get())/100
-		self.audio.set_volume(val)
+		self.audio.set_volume((self.slider.get())/100)
 
 	def update_text(self):
 		self.text.delete("1.0", "end")
