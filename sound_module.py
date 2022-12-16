@@ -1,5 +1,6 @@
 from just_playback import Playback
 import tkinter as tk
+
 class Sound_module():
 	def __init__(self, file_name, window_arg, loop=True):
 		self.audio = Playback(file_name)
