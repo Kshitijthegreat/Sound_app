@@ -15,6 +15,11 @@ class Sound_module():
 		#create the main frame
 		self.frame = tk.Frame(self.background_frame)
 		self.frame.pack(side = tk.TOP, padx = 0, pady=4)
+		#create playback seek entry box and button
+		self.playback_seek_entry = tk.Entry(self.frame)
+		self.playback_seek_entry.grid(row = 0, column = 4)
+		self.playback_seek_entry_button = tk.Button(self.frame, text = 'seek', command = self.playback_seek)
+		self.playback_seek_entry_button.grid(row =0, column = 6)
 		#create the track name label
 		self.name_label = tk.Label(self.frame, text=((file_name.split('/'))[-1])[:15], width = 15, height = 2)
 		self.name_label.grid(row = 0, column = 0)
@@ -51,10 +56,16 @@ class Sound_module():
 		else:
 			self.audio.play()
 
-	def volume_update(self, value=None):
+	def volume_update(self, value = None):
 		#volume slider function
 		self.audio.set_volume((self.slider.get())/100)
 
+	def playback_seek(self):
+		try:
+			self.audio.seek(int(self.playback_seek_entry.get()))
+			self.playback_seek_entry.delete(0, 'end')
+		except:
+			pass
 	def update_text(self):
 		#text updater function
 		self.text.delete("1.0", "end")
