@@ -3,7 +3,7 @@ def main():
 	import sound_module
 
 	window = tk.Tk()
-	window.geometry("500x500")
+	window.geometry("400x700")
 	window.title('sound_manager')
 	def init_one():
 		module1 = sound_module.Sound_module('sound_files/police_siren.mp3', window)
