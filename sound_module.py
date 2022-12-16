@@ -17,15 +17,18 @@ class Sound_module():
 		self.slider = tk.Scale(self.frame, from_=0, to=100, orient = tk.HORIZONTAL, command = self.volume_update)
 		self.slider.set(100)
 		self.slider.grid(row=1, column =0)
-
-		self.play_button = tk.Button(self.frame, text = 'play/stop', command = self.button_play_stop)
-		self.play_button.grid(row=0, column=1)
 		
-		self.pause_button = tk.Button(self.frame, text = 'pause/resume', command = self.button_pause_resume)
-		self.pause_button.grid(row=0, column=2)
+		self.button_frame = tk.Frame(self.frame)
+		self.button_frame.grid(row = 1, column = 1)
+
+		self.play_button = tk.Button(self.button_frame, text = 'play/stop', command = self.button_play_stop)
+		self.play_button.pack(side = tk.LEFT)
+		
+		self.pause_button = tk.Button(self.button_frame, text = 'pause/resume', command = self.button_pause_resume)
+		self.pause_button.pack(side = tk.LEFT)
 		
 		self.text = tk.Text(self.frame, height =1, width=20)
-		self.text.grid(row=1, column = 1)
+		self.text.grid(row=0, column = 1)
 		
 		self.frame.pack(side = tk.TOP)
 		
