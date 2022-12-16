@@ -23,9 +23,12 @@ def main():
 
 		pass
 
-	inp = int(input('1->Godva\n2->natak_2\n>'))
 	inits = [init_one, init_two]
-	(inits[inp-1])()
+	try:
+		inp = int(input('1->Godva\n2->natak_2\n>'))
+		(inits[inp-1])()
+	except:
+		(inits[0])()
 	window.mainloop()
 
 if __name__=='__main__':
