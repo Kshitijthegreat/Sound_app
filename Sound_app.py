@@ -3,7 +3,7 @@ def main():
 	import sound_module
 
 	window = tk.Tk()
-	window.geometry("700x700")
+	window.geometry("1000x700")
 	window.title('sound_manager')
 
 	def init_one():
