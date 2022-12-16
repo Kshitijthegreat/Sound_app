@@ -13,9 +13,9 @@ def main():
 		module5 = sound_module.Sound_module('sound_files/land_line.mp3', window)
 		module6 = sound_module.Sound_module('sound_files/pakhavaj_1.mp3', window)
 		module7 = sound_module.Sound_module('sound_files/painful_beep.mp3', window)
-		module8 = sound_module.Sound_module('sound_files/buffer_1.mp3', window)
-		module9 = sound_module.Sound_module('sound_files/buffer_2.mp3', window)
-		module10 = sound_module.Sound_module('sound_files/buffer_3.mp3', window)
+		module8 = sound_module.Sound_module('sound_files/buffer_1.mp3', window, loop=False)
+		module9 = sound_module.Sound_module('sound_files/buffer_2.mp3', window, loop=False)
+		module10 = sound_module.Sound_module('sound_files/buffer_3.mp3', window, loop=False)
 	def init_two():
 		pass
 	inp = int(input('1->Godva\n2->natak_2\n>'))

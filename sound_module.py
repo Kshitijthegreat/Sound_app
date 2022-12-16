@@ -39,7 +39,7 @@ class Sound_module():
 
 	def update_text(self):
 		self.text.delete("1.0", "end")
-		self.text.insert(tk.END, f'{self.audio.playing}->{round(self.audio.curr_pos)}')
+		self.text.insert(tk.END, f'{self.audio.playing}->{round(self.audio.curr_pos)}||{round(self.audio.duration)}')
 		self.text.after(1, self.update_text)
 
 
