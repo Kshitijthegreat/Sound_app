@@ -3,7 +3,7 @@ def main():
 	import sound_module
 
 	window = tk.Tk()
-	window.geometry("400x700")
+	window.geometry("700x700")
 	window.title('sound_manager')
 
 	def init_one():
@@ -11,6 +11,7 @@ def main():
 		module1 = sound_module.Sound_module('sound_files/police_siren.mp3', window)
 		module2 = sound_module.Sound_module('sound_files/background_edited.mp3', window)
 		module3 = sound_module.Sound_module('sound_files/Ambulance_siren.mp3', window)
+		module11 = sound_module.Sound_module('sound_files/tick_tick.mp3', window)
 		module4 = sound_module.Sound_module('sound_files/nokia_ringtone_edited.mp3', window)
 		module5 = sound_module.Sound_module('sound_files/land_line.mp3', window)
 		module6 = sound_module.Sound_module('sound_files/pakhavaj_1.mp3', window)
