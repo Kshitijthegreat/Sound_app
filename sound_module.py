@@ -11,18 +11,21 @@ class Sound_module():
 
 		self.frame = tk.Frame(self.window)
 
-		self.slider = tk.Scale(self.frame, from_=0, to=100, orient = tk.HORIZONTAL, label = (file_name.split('/'))[-1], command = self.volume_update)
-		self.slider.set(100)
-		self.slider.pack(side = tk.LEFT)
+		self.name_label = tk.Label(self.frame, text=((file_name.split('/'))[-1])[:14])
+		self.name_label.grid(row=0, column=0)
 
-		self.play_button = tk.Button(self.frame, text = 'play', command = self.audio.play)
-		self.play_button.pack(side = tk.RIGHT)
+		self.slider = tk.Scale(self.frame, from_=0, to=100, orient = tk.HORIZONTAL, command = self.volume_update)
+		self.slider.set(100)
+		self.slider.grid(row=1, column =0)
+
+		self.play_button = tk.Button(self.frame, text = 'play/stop', command = self.button_play_stop)
+		self.play_button.grid(row=0, column=1)
 		
 		self.pause_button = tk.Button(self.frame, text = 'pause/resume', command = self.button_pause_resume)
-		self.pause_button.pack(side = tk.RIGHT)
+		self.pause_button.grid(row=0, column=2)
 		
 		self.text = tk.Text(self.frame, height =1, width=20)
-		self.text.pack(side = tk.BOTTOM)
+		self.text.grid(row=1, column = 1)
 		
 		self.frame.pack(side = tk.TOP)
 		
@@ -33,6 +36,12 @@ class Sound_module():
 			self.audio.pause()
 		else:
 			self.audio.resume()
+
+	def button_play_stop(self):
+		if self.audio.active:
+			self.audio.stop()
+		else:
+			self.audio.play()
 
 	def volume_update(self, value=None):
 		val = (self.slider.get())/100
