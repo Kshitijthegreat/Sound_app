@@ -82,6 +82,7 @@ class Sound_module():
 	def enable_button_func(self):
 		if self.track_enable:
 			self.track_enable = False
+			self.audio.stop()
 		else:
 			self.track_enable = True
 
