@@ -10,15 +10,18 @@ def main():
 
 		module1 = sound_module.Sound_module('sound_files/police_siren.mp3', window)
 		module2 = sound_module.Sound_module('sound_files/background_edited.mp3', window)
+		#announcement
+		#module13 = sound_module.Sound_module('sound_files/recorded_faster.mp3', window, loop=False)
 		module3 = sound_module.Sound_module('sound_files/Ambulance_siren.mp3', window)
 		module11 = sound_module.Sound_module('sound_files/tick_tick.mp3', window)
 		module4 = sound_module.Sound_module('sound_files/nokia_ringtone_edited.mp3', window)
 		module5 = sound_module.Sound_module('sound_files/land_line.mp3', window)
 		module6 = sound_module.Sound_module('sound_files/pakhavaj_1.mp3', window)
 		module7 = sound_module.Sound_module('sound_files/painful_beep.mp3', window)
-		module8 = sound_module.Sound_module('sound_files/buffer_1.mp3', window, loop=False)
-		module9 = sound_module.Sound_module('sound_files/buffer_2.mp3', window, loop=False)
-		module10 = sound_module.Sound_module('sound_files/buffer_3.mp3', window, loop=False)
+		module8 = sound_module.Sound_module('sound_files/prakash_bolat_hota_edited.mp3', window, loop=False)
+		module9 = sound_module.Sound_module('sound_files/recorded_edited.mp3', window, loop=False)
+		module10 = sound_module.Sound_module('sound_files/recorded_fast.mp3', window, loop=False)
+		module12 = sound_module.Sound_module('sound_files/recorded_faster.mp3', window, loop=False)
 	
 	def init_two():
 
