@@ -17,17 +17,20 @@ def main():
 		module4 = sound_module.Sound_module('sound_files/one/nokia_ringtone_edited.mp3', window)
 		module5 = sound_module.Sound_module('sound_files/one/land_line.mp3', window)
 		module6 = sound_module.Sound_module('sound_files/one/pakhavaj_1.mp3', window)
-		module7 = sound_module.Sound_module('sound_files/one/painful_beep.mp3', window)
 		module8 = sound_module.Sound_module('sound_files/one/prakash_bolat_hota.mp3', window, loop=False)
 		module9 = sound_module.Sound_module('sound_files/one/recorded_original.mp3', window, loop=False)
-		module10 = sound_module.Sound_module('sound_files/one/recorded_fast(12x).mp3', window, loop=False)
-		module12 = sound_module.Sound_module('sound_files/one/recorded_faster(13x).mp3', window, loop=False)
+		module7 = sound_module.Sound_module('sound_files/one/painful_beep.mp3', window)
+		module10 = sound_module.Sound_module('sound_files/one/recorded_edited.mp3', window, loop=False)
 	
 	def init_two():
-		module1 = sound_module.Sound_module('sound_files/two/chipndale.mp3', window)
-		module2 = sound_module.Sound_module('sound_files/two/flute.mp3', window, loop=False)
+		module7 = sound_module.Sound_module('sound_files/two/goli_mar.mp3', window)
 		module3 = sound_module.Sound_module('sound_files/two/gotya_title.mp3', window, loop=False)
+		module6 = sound_module.Sound_module('sound_files/two/chadi_lage.mp3', window)
+		module1 = sound_module.Sound_module('sound_files/two/chipndale.mp3', window)
+		module8 = sound_module.Sound_module('sound_files/two/yahan_ke_sikandar.mp3', window)
 		module4 = sound_module.Sound_module('sound_files/two/Teen_deviya.mp3', window, loop=False)
+		module5 = sound_module.Sound_module('sound_files/two/sanai.mp3', window)
+		module2 = sound_module.Sound_module('sound_files/two/flute.mp3', window, loop=False)
 
 	inits = [init_one, init_two]
 	try:
