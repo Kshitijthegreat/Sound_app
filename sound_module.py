@@ -33,7 +33,7 @@ class Sound_module():
 		self.slider.grid(row=0, column =2)
 		#create extra frame for formatting play/stop and pause/resume buttons
 		self.button_frame = tk.Frame(self.frame)
-		self.button_frame.grid(row = 0, column = 4)
+		self.button_frame.grid(row = 0, column = 3)
 		#create play/stop button
 		self.play_button = tk.Button(self.button_frame, text = 'play/stop', command = self.button_play_stop)
 		self.play_button.pack(side = tk.LEFT)
@@ -42,7 +42,7 @@ class Sound_module():
 		self.pause_button.pack(side = tk.LEFT)
 		#create the text box to indicate current condition(playing/not playing) and display playback point
 		self.text = tk.Text(self.frame, height =1, width=40)
-		self.text.grid(row=0, column = 3)
+		self.text.grid(row=0, column = 4)
 		#call the update_text method to start the text update loop
 		self.update_text()
 
