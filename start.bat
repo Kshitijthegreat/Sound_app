@@ -1,0 +1,1 @@
+powershell  ./../python/python.exe ./Sound_app.py
