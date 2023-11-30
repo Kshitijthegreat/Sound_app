@@ -11,7 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>Sound_app</Name>
     <RootNamespace>Sound_app</RootNamespace>
-    <InterpreterId>Global|PythonCore|3.11</InterpreterId>
+    <InterpreterId>Global|VisualStudio|Pythonw</InterpreterId>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
     <InterpreterPath>
     </InterpreterPath>
