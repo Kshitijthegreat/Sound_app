@@ -1,1 +1,1 @@
-powershell  ./../python/python.exe ./Sound_app.py
+powershell  ./../python/pythonw.exe ./Sound_app.py
