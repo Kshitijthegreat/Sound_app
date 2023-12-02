@@ -363,4 +363,8 @@ MigrationBackup/
 FodyWeavers.xsd
 #last year's tracks
 sound_files_old/
+#audacity project files
 sound_files/audacityProjectFiles/
+#pyinstaller files
+*.spec
+build/
