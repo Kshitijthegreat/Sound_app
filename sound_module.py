@@ -1,6 +1,6 @@
-from just_playback import Playback
+import just_playback
 import tkinter as tk
-
+Playback = just_playback.Playback
 class Sound_module():
 	def __init__(self, file_name, window_arg, loop=True):
 		#load the audio, create the audio instance
