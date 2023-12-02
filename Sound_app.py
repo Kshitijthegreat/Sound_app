@@ -1,7 +1,7 @@
+import tkinter as tk
+import sound_module
 def main():
-	import tkinter as tk
-	import sound_module
-
+	
 	window = tk.Tk()
 	window.geometry("1000x700")
 	window.title('sound_manager')
