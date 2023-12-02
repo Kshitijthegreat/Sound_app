@@ -48,6 +48,3 @@ def main():
 	init_two()
 	init_three()
 	window.mainloop()
-
-if __name__=='__main__':
-	main()
