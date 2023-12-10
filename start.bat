@@ -1,1 +1,1 @@
-powershell  ./../python/pythonw.exe ./main.py
+powershell  ./python/pythonw.exe ./main.py
