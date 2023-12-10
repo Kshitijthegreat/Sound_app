@@ -368,3 +368,4 @@ sound_files/audacityProjectFiles/
 #pyinstaller files
 *.spec
 build/
+/Sound_app.pyproj
