@@ -1,6 +1,6 @@
-from just_playback import Playback
+import just_playback
 import tkinter as tk
-
+Playback = just_playback.Playback
 class Sound_module():
 	def __init__(self, file_name, window_arg, loop=True):
 		#load the audio, create the audio instance
@@ -87,3 +87,20 @@ class Sound_module():
 			self.track_enable = True
 
 
+class Divider():
+	def __init__(self, window_arg, _text):
+		#define window object
+		self.window = window_arg
+		#create the background frame
+		self.background_frame = tk.Frame(self.window, background = 'red')
+		self.background_frame.pack(side = tk.TOP, anchor = tk.NW)
+		#create the main frame
+		self.frame = tk.Frame(self.background_frame)
+		self.frame.pack(side = tk.TOP, padx = 5, pady=4)
+		
+		self.name_label = tk.Label(self.frame, text=_text, width = 15, height = 2)
+		self.name_label.pack(side=tk.TOP, padx=0, pady=0)
+	
+
+		
+		
