@@ -15,7 +15,7 @@ class Sound_module():
 		self.background_frame.pack(side = tk.TOP, anchor = tk.NW)
 		#create the main frame
 		self.frame = tk.Frame(self.background_frame)
-		self.frame.pack(side = tk.TOP, padx = 0, pady=4)
+		self.frame.pack(side = tk.TOP, padx = 0, pady=1)
 		#create track enable button
 		self.enable_button = tk.Button(self.frame, text = 'enable/disable', command = self.enable_button_func)
 		self.enable_button.grid(row=0, column = 1)
