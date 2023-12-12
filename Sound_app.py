@@ -11,6 +11,8 @@ def main():
 	def init_zero():
 		#common skit end music
 		sound_module.Divider(main_window, "Common")
+		sound_module.Sound_module('sound_files/edited/misc/t_Nandi.mp3', main_window, loop=False)
+		sound_module.Sound_module('sound_files/edited/misc/t0_BHJTitleTrack.mp3', main_window, loop=False)
 		sound_module.Sound_module('sound_files/edited/misc/t1_skitEndMusic.mp3', main_window, loop=False)
 		sound_module.Sound_module('sound_files/edited/misc/t2_blackoutToComparingMusic.mp3', main_window)
 		sound_module.Divider(main_window, "Skit-wise")
@@ -47,11 +49,9 @@ def main():
 		#tavalAshram
 		sound_module.Divider(window, "tavalAshram")
 		sound_module.Sound_module('sound_files/edited/tavalAshram/t1_spiritualMusic.mp3', window)
-		sound_module.Sound_module('sound_files/edited/tavalAshram/t2-4_googlePaySuccessSound.mp3', window, loop=False)
-		sound_module.Sound_module('sound_files/edited/tavalAshram/t3_lifebuoy.mp3', window, loop=False)
-		sound_module.Sound_module('sound_files/edited/tavalAshram/t5_KokilaAwaj.mp3', window, loop=False)
-		sound_module.Sound_module('sound_files/edited/tavalAshram/t5_KokilaAwaj.mp3', window, loop=False)
-		sound_module.Sound_module('sound_files/edited/tavalAshram/t6_templeBell.mp3', window, loop=False)
+		sound_module.Sound_module('sound_files/edited/tavalAshram/t2_lifebuoy.mp3', window, loop=False)
+		sound_module.Sound_module('sound_files/edited/tavalAshram/t3_KokilaAwaj.mp3', window, loop=False)
+		sound_module.Sound_module('sound_files/edited/tavalAshram/t4_templeBell.mp3', window, loop=False)
 
 	init_zero()
 	#pack this later because init_zero contains common Sound_modules
