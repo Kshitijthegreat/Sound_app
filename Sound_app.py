@@ -34,6 +34,7 @@ def main():
 		sound_module.Sound_module('sound_files/edited/missionSuccessful/t4-5-6_subjectChangeMusic.mp3', window)
 	def init_three():
 		#mulgiBaghnyachaKaryakram
+		sound_module.Divider(window, "MulgiBaghnyachaKaryakram")
 		sound_module.Sound_module('sound_files/edited/mulgiBaghnyachaKaryakram/t1_kandePohe.mp3', window, loop=False)
 		sound_module.Sound_module('sound_files/edited/mulgiBaghnyachaKaryakram/t2_retiwalaNavraPahije.mp3', window, loop=False)
 		sound_module.Sound_module('sound_files/edited/mulgiBaghnyachaKaryakram/t3_naSangatachAaj.mp3', window, loop=False)
