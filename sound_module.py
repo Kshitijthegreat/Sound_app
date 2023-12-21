@@ -53,6 +53,7 @@ class Sound_module():
 		else:
 			if self.track_enable:
 				self.audio.resume()
+				self.volume_update()
 
 	def button_play_stop(self):
 		#play/stop button function
@@ -61,6 +62,7 @@ class Sound_module():
 		else:
 			if self.track_enable:
 				self.audio.play()
+				self.volume_update()
 
 	def volume_update(self, value = None):
 		#volume slider function
