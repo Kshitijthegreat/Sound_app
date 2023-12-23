@@ -11,6 +11,8 @@ def main():
 	def init_zero():
 		#common skit end music
 		sound_module.Divider(main_window, "Common")
+		sound_module.Sound_module('sound_files/edited/misc/t_ghanta.mp3', main_window)
+		sound_module.Sound_module('sound_files/edited/misc/t_Nandi[instrumental].mp3', main_window)
 		sound_module.Sound_module('sound_files/edited/misc/t_Nandi.mp3', main_window, loop=False)
 		sound_module.Sound_module('sound_files/edited/misc/t0_BHJTitleTrack.mp3', main_window, loop=False)
 		sound_module.Sound_module('sound_files/edited/misc/t1_skitEndMusic.mp3', main_window, loop=False)
@@ -56,14 +58,15 @@ def main():
 		sound_module.Sound_module('sound_files/edited/tavalAshram/t5_lifebuoy.mp3', window, loop=False)
 		sound_module.Sound_module('sound_files/edited/tavalAshram/t6_KokilaAwaj.mp3', window, loop=False)
 		sound_module.Sound_module('sound_files/edited/tavalAshram/t7_templeBell.mp3', window, loop=False)
-		sound_module.Sound_module('sound_files/edited/tavalAshram/t8_news.mp3', window, loop=False)
+		sound_module.Sound_module('sound_files/edited/tavalAshram/t8_ringtone.mp3', window, loop=False)
+		sound_module.Sound_module('sound_files/edited/tavalAshram/t9_news.mp3', window, loop=False)
 
 	init_zero()
 	#pack this later because init_zero contains common Sound_modules
 	main_frame.pack()
-	init_one()
 	init_two()
 	init_three()
 	init_four()
 	init_five()
+	init_one()
 	window.mainloop()
