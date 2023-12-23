@@ -44,7 +44,7 @@ class Sound_module():
 		self.text = tk.Text(self.frame, height =1, width=40)
 		self.text.grid(row=0, column = 4)
 		#call the update_text method to start the text update loop
-		self.update_text()
+		self.update_text_loop()
 
 	def button_pause_resume(self):
 		#pause/resume button function
@@ -54,6 +54,7 @@ class Sound_module():
 			if self.track_enable:
 				self.audio.resume()
 				self.volume_update()
+		self.update_text()
 
 	def button_play_stop(self):
 		#play/stop button function
@@ -63,6 +64,7 @@ class Sound_module():
 			if self.track_enable:
 				self.audio.play()
 				self.volume_update()
+		self.update_text()
 
 	def volume_update(self, value = None):
 		#volume slider function
@@ -74,12 +76,17 @@ class Sound_module():
 			self.playback_seek_entry.delete(0, 'end')
 		except:
 			pass
+		self.update_text()		
 
 	def update_text(self):
 		#text updater function
 		self.text.delete("1.0", "end")
 		self.text.insert(tk.END, f'enabled:{self.track_enable}||playing:{self.audio.playing}->{round(self.audio.curr_pos)}||{round(self.audio.duration)}')
-		self.text.after(1, self.update_text)
+
+	def update_text_loop(self):
+		#text updater loop function
+		self.update_text()
+		self.text.after(100, self.update_text_loop)
 
 	def enable_button_func(self):
 		if self.track_enable:
@@ -87,7 +94,7 @@ class Sound_module():
 			self.audio.stop()
 		else:
 			self.track_enable = True
-
+		self.update_text()
 
 class Divider():
 	def __init__(self, window_arg, _text):
