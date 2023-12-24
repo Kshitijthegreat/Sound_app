@@ -63,7 +63,7 @@ def main():
 
 	init_zero()
 	#pack this later because init_zero contains common Sound_modules
-	main_frame.pack()
+	main_frame.pack(anchor=tk.NW)
 	init_two()
 	init_three()
 	init_four()
