@@ -20,13 +20,13 @@ def main():
 		sound_module.Divider(main_window, "Skit-wise")
 	def init_one():
 		#mayat
-		#sound_module.Divider(window, "Mayat")
+		sound_module.Divider(window, "Mayat")
 		#sound_module.Sound_module('sound_files/edited/mayat/t1_sadFunnyMusic.mp3', window, loop=False)
 		#sound_module.Sound_module('sound_files/edited/mayat/t2_donkeyNoise.mp3', window, loop=False)
 		#sound_module.Sound_module('sound_files/edited/mayat/t3_annaAnna.mp3', window)
 		#sound_module.Sound_module('sound_files/edited/mayat/t4_zoAvadtoSarvala.mp3', window)
 		#sound_module.Sound_module('sound_files/edited/mayat/t5_oDuniyaKeRakhwale.mp3', window)
-		sound_module.Sound_module('sound_files/edited/mayat/t6_gauravSangitacha.mp3', window)
+		#sound_module.Sound_module('sound_files/edited/mayat/t6_gauravSangitacha.mp3', window)
 
 
 	init_zero()
