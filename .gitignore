@@ -361,4 +361,11 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/sound_files_old
+#last year's tracks
+sound_files_old/
+#audacity project files
+sound_files/audacityProjectFiles/
+#pyinstaller files
+*.spec
+build/
+/Sound_app.pyproj
