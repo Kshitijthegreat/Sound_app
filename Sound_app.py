@@ -8,29 +8,25 @@ def main():
 	main_frame = sound_module.VerticalScrolledFrame(main_window)
 	window = main_frame.interior
 	
+	#non-scrolled modules:
 	def init_zero():
-		#common skit end music
-		#sound_module.Divider(main_window, "Common")
-		#sound_module.Sound_module('sound_files/edited/misc/t_ghanta.mp3', main_window)
-		#sound_module.Sound_module('sound_files/edited/misc/t_Nandi[instrumental].mp3', main_window)
-		#sound_module.Sound_module('sound_files/edited/misc/t_Nandi.mp3', main_window, loop=False)
-		#sound_module.Sound_module('sound_files/edited/misc/t0_BHJTitleTrack.mp3', main_window, loop=False)
-		#sound_module.Sound_module('sound_files/edited/misc/t1_skitEndMusic.mp3', main_window, loop=False)
-		#sound_module.Sound_module('sound_files/edited/misc/t2_blackoutToComparingMusic.mp3', main_window)
-		sound_module.Divider(main_window, "Skit-wise")
+		sound_module.Divider(main_window, "common")
+		#module eg: sound_module.Sound_module('path/to/file.mp3', main_window, loop = True/False)
+		sound_module.Divider(main_window, "unit-wise")
+
+	#scrolled modules:
 	def init_one():
-		#mayat
-		sound_module.Divider(window, "Mayat")
-		#sound_module.Sound_module('sound_files/edited/mayat/t1_sadFunnyMusic.mp3', window, loop=False)
-		#sound_module.Sound_module('sound_files/edited/mayat/t2_donkeyNoise.mp3', window, loop=False)
-		#sound_module.Sound_module('sound_files/edited/mayat/t3_annaAnna.mp3', window)
-		#sound_module.Sound_module('sound_files/edited/mayat/t4_zoAvadtoSarvala.mp3', window)
-		#sound_module.Sound_module('sound_files/edited/mayat/t5_oDuniyaKeRakhwale.mp3', window)
-		#sound_module.Sound_module('sound_files/edited/mayat/t6_gauravSangitacha.mp3', window)
+		#unit1
+		sound_module.Divider(window, "unit1")
+		#sound_module.Sound_module('path/to/file.mp3', window, loop=True/False)
 
 
+	#non-scrolled:
 	init_zero()
-	#pack this later because init_zero contains common Sound_modules
+	#pack non-scrolled
 	main_frame.pack(anchor=tk.NW)
+	#scrolled:
 	init_one()
+	#init_two()...
+
 	window.mainloop()
