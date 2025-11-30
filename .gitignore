@@ -369,3 +369,6 @@ sound_files/audacityProjectFiles/
 *.spec
 build/
 /Sound_app.pyproj
+#venv
+.venv
+senv
