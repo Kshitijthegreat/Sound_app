@@ -81,7 +81,7 @@ class Sound_module():
 	def update_text(self):
 		#text updater function
 		self.text.delete("1.0", "end")
-		self.text.insert(tk.END, f'enabled:{self.track_enable}||playing:{self.audio.playing}->{round(self.audio.curr_pos)}||{round(self.audio.duration)}')
+		self.text.insert(tk.END, f'en:{self.track_enable}||pl:{self.audio.playing}->{round(self.audio.curr_pos)}/{round(self.audio.duration)}')
 
 	def update_text_loop(self):
 		#text updater loop function
