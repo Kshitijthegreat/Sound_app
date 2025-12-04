@@ -4,16 +4,22 @@ import sound_module
 
 class soundFile:
 	def __init__(self, str):
-		self.path = (str.split(","))[0]
-		self.loop = ( (str.split(","))[1] == "1" )
+		self.path = (str.split(','))[0]
+		self.loop = ( (str.split(','))[1] == '1' )
 
 class unitFile:
-	def __init__(self, str):
-		split_str = str.split("\n")
+	def __init__(self, str, window):
+		self.window = window
+		split_str = str.split('\n')
 		self.soundFiles = []
 		self.unitName=split_str[0]
 		for i in range(1,len(split_str)):
 			self.soundFiles.append(soundFile(split_str[i]))
+	
+	def init(self):
+		sound_module.Divider(self.window, self.unitName)
+		for file in self.soundFiles:
+			sound_module.Sound_module(file.path, self.window, file.loop)
 
 
 def main():
@@ -24,33 +30,48 @@ def main():
 	main_frame = sound_module.VerticalScrolledFrame(main_window)
 	window = main_frame.interior
 	
-	#non-scrolled modules:
-	def init_zero():
-		sound_module.Divider(main_window, "common")
-		#module eg: sound_module.Sound_module('path/to/file.mp3', main_window, loop = True/False)
-		sound_module.Divider(main_window, "unit-wise")
-
-	#scrolled modules:
-	def init_one():
-		#unit1
-		sound_module.Divider(window, "unit1")
-		#sound_module.Sound_module('path/to/file.mp3', window, loop=True/False)
-
-
-	#non-scrolled:
-	init_zero()
-	#pack non-scrolled
+	with open('fileSave.txt') as f: F_txt=f.read()
+	#remove EOL characters from end of file
+	while F_txt[-1] == '\n':
+		F_txt = F_txt[:-1]
+	
+	F_unitSplit=F_txt.split('\n::\n')
+	
+	NonScrolled = unitFile(F_unitSplit[0], main_window)
+	NonScrolled.init()
 	main_frame.pack(anchor=tk.NW)
-	#scrolled:
-	init_one()
-	#init_two()...
+	F_unitSplit.pop(0)
+	ScrolledList = []
+	for i in range(len(F_unitSplit)):
+		ScrolledList.append(unitFile(F_unitSplit[i], window))
+		ScrolledList[i].init()
 
 	window.mainloop()
 
-#with open('fileSave.txt') as f: F_txt=f.read()
-#F_unitSplit=F_txt.split("::")
 
 if __name__=="__main__":
+	#
+	main_window = tk.Tk()
+	main_window.geometry("1000x700")
+	main_window.title('sound_manager')
+	main_frame = sound_module.VerticalScrolledFrame(main_window)
+	window = main_frame.interior
+	#
 	
-	uf = unitFile("name\npath/to/file1.mp3,1\npath/to/file2.mp3,0")
-	print(uf.unitName, uf.soundFiles[0].path, uf.soundFiles[0].loop)
+	with open('fileSave.txt') as f: F_txt=f.read()
+	#remove EOL characters from end of file
+	while F_txt[-1] == '\n':
+		F_txt = F_txt[:-1]
+	
+	F_unitSplit=F_txt.split('\n::\n')
+	
+	NonScrolled = unitFile(F_unitSplit[0], main_window)
+	NonScrolled.init()
+	main_frame.pack(anchor=tk.NW)
+	F_unitSplit.pop(0)
+	ScrolledList = []
+	for i in range(len(F_unitSplit)):
+		ScrolledList.append(unitFile(F_unitSplit[i], window))
+		ScrolledList[i].init()
+	
+	window.mainloop()
