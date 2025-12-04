@@ -50,28 +50,4 @@ def main():
 
 
 if __name__=="__main__":
-	#
-	main_window = tk.Tk()
-	main_window.geometry("1000x700")
-	main_window.title('sound_manager')
-	main_frame = sound_module.VerticalScrolledFrame(main_window)
-	window = main_frame.interior
-	#
-	
-	with open('fileSave.txt') as f: F_txt=f.read()
-	#remove EOL characters from end of file
-	while F_txt[-1] == '\n':
-		F_txt = F_txt[:-1]
-	
-	F_unitSplit=F_txt.split('\n::\n')
-	
-	NonScrolled = unitFile(F_unitSplit[0], main_window)
-	NonScrolled.init()
-	main_frame.pack(anchor=tk.NW)
-	F_unitSplit.pop(0)
-	ScrolledList = []
-	for i in range(len(F_unitSplit)):
-		ScrolledList.append(unitFile(F_unitSplit[i], window))
-		ScrolledList[i].init()
-	
-	window.mainloop()
+	print('use main.py')
