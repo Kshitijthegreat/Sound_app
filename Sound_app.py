@@ -25,7 +25,7 @@ class unitFile:
 def main():
 	#use window as frame interior because legacy
 	main_window = tk.Tk()
-	main_window.geometry("1000x700")
+	main_window.geometry("1200x700")
 	main_window.title('sound_manager')
 	main_frame = sound_module.VerticalScrolledFrame(main_window)
 	window = main_frame.interior
