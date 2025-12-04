@@ -48,10 +48,12 @@ class Sound_module():
 
 	def button_pause_resume(self):
 		#pause/resume button function
-		if self.audio.playing:
-			self.audio.pause()
+		if not self.track_enable:
+			pass
 		else:
-			if self.track_enable:
+			if self.audio.playing:
+				self.audio.pause()
+			else:
 				self.audio.resume()
 				self.volume_update()
 		self.update_text()
