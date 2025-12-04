@@ -374,3 +374,5 @@ build/
 senv
 todo
 fileSave.txt
+.vscode/launch.json
+music
